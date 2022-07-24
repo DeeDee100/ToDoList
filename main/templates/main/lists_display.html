@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+   <title>Lists Created!</title>
+{% endblock %}
+
+{% block content %}
+    <h3>All lists</h3>
+    <div class="list-group">
+    {% for list in lists %}
+        <a href="/{{list.id}}" class="list-group-item list-group-item-action" aria-current="true">{{list.name}}</a>
+    {% endfor %}
+    </div>
+{% endblock %}
+
